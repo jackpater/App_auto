@@ -76,7 +76,7 @@ exports.main_handler = async (event, context, callback) => {
 
 **注意：**<br>
 Ⅰ方案一与方案二不能混合到同一个index.js文件中使用，同一个仓库下，二者只能选择其一。<br>
-Ⅱ感谢[issues#115](https://github.com/LXK9301/jd_scripts/issues/115)中的解决方案，目前云函数连续测试已经可以规避热启动问题了。<br>
+Ⅱ感谢[issues#115](https://github.com/lxk0301/jd_scripts/issues/115)中的解决方案，目前云函数连续测试已经可以规避热启动问题了。<br>
 Ⅲ在确保完全按照本教程设置的情况下测试云函数运行情况，对于部分人运行日志中出现某些脚本运行失败其他正常，并且错误提示带有strict字样的，请自行删除index.js中的```'use strict';```，再做测试<br>
 
  **增加cookie**
@@ -154,7 +154,7 @@ let CookieJDs = [
 |     `jd_bean_change`     |       京豆变动通知       |     长期     |         0 2 * * *         |         0 1 */1 * *         |     30 7 * * *     |
 |      `jd_bean_home`      |      领京豆额外奖励      |     长期     |             /             |         0 1 */1 * *         |     30 7 * * *     |
 |      `jd_bean_sign`      |         京豆签到         |     长期     |        0 16 * * *         |         0 0 */1 * *         |     0 0 * * *      |
-|      `jd_blueCoin`       |      东东超市兑换奖品      |     长期     |        0 16 * * *         |         0 1 */1 * *         |     0 0 * * *      |
+|      `jd_blueCoin`       |      京小超兑换奖品      |     长期     |        0 16 * * *         |         0 1 */1 * *         |     0 0 * * *      |
 |      `jd_bookshop`       |         口袋书店         |     长期     |             /             |              /              |  5 6-18/6,8 * * *  |
 |         `jd_car`         |         京东汽车         |     长期     |             /             |         0 0 */1 * *         |     0 0 * * *      |
 |    `jd_car_exchange`     |       京东汽车兑换       |     长期     |             /             |              /              |     0 0 * * *      |
