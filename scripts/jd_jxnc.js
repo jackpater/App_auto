@@ -3,7 +3,7 @@
 本脚本搬运自 https://github.com/whyour/hundun/blob/master/quanx/jx_nc.js
 感谢 @whyour 大佬
 
-京喜农场:脚本更新地址 https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jxnc.js
+京喜农场:脚本更新地址 https://raw.githubusercontent.com/shuye72/MyActions/main/scripts/jd_jxnc.js
 更新时间：2021-01-10 22:47:51
 东东农场活动链接：https://wqsh.jd.com/sns/201912/12/jxnc/detail.html?ptag=7155.9.32&smp=b47f4790d7b2a024e75279f55f6249b9&active=jdnc_1_chelizi1205_2
 已支持IOS双京东账号,Node.js支持N个京东账号
@@ -14,20 +14,20 @@ hostname = wq.jd.com
 
 ==========================Quantumultx=========================
 [task_local]
-0 9,12,18 * * * https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jxnc.js, tag=京喜农场, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jxnc.png, enabled=true
+0 9,12,18 * * * https://raw.githubusercontent.com/shuye72/MyActions/main/scripts/jd_jxnc.js, tag=京喜农场, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jxnc.png, enabled=true
 [rewrite_local]
 ^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask url script-request-header https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.cookie.js
 =========================Loon=============================
 [Script]
 http-request ^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.cookie.js, requires-body=false, timeout=10, tag=京喜农场cookie
-cron "0 9,12,18 * * *" script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jxnc.js,tag=京喜农场
+cron "0 9,12,18 * * *" script-path=https://raw.githubusercontent.com/shuye72/MyActions/main/scripts/jd_jxnc.js,tag=京喜农场
 
 =========================Surge============================
-京喜农场 = type=cron,cronexp="0 9,12,18 * * *",timeout=60,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jxnc.js
+京喜农场 = type=cron,cronexp="0 9,12,18 * * *",timeout=60,script-path=https://raw.githubusercontent.com/shuye72/MyActions/main/scripts/jd_jxnc.js
 京喜农场cookie = type=http-request,pattern=^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask,requires-body=0,max-size=0,script-path= https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.cookie.js
  
 =========================小火箭===========================
-京喜农场 = type=cron,script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jxnc.js, cronexpr="0 9,12,18 * * *", timeout=200, enable=true
+京喜农场 = type=cron,script-path=https://raw.githubusercontent.com/shuye72/MyActions/main/scripts/jd_jxnc.js, cronexpr="0 9,12,18 * * *", timeout=200, enable=true
 京喜农场APP种子cookie = type=http-request,script-path=https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.cookie.js,pattern=^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask,max-size=131072,timeout=110,enable=true
 
 特别说明：
@@ -44,7 +44,7 @@ let currentCookie = ''; // 当前用户 cookie
 let tokenNull = {'farm_jstoken': '', 'phoneid': '', 'timestamp': ''}; // 内置一份空的 token
 let tokenArr = []; // 用户 token 数组
 let currentToken = {}; // 当前用户 token
-const shareCode = '22bd6fbbabbaa770a45ab2607e7a1e8a@197c6094e965fdf3d33621b47719e0b1'; // 内置助力码
+const shareCode = '9fd2b36b50211850d7ead64090e6d28b@b2db9e876879d33feb40aca71c8df1d7@f2776ec07e9f62464e123ceab37304b8@55b3e8ef247a1bc9624095385f34d634@74593eb110f33bbf4b065086b59c4456@8d52547e368835489876ba72a4b2a9d4'; // 内置助力码
 let jxncShareCodeArr = []; // 用户 助力码 数组
 let currentShareCode = []; // 当前用户 要助力的助力码
 const openUrl = `openjd://virtual?params=${encodeURIComponent('{ "category": "jump", "des": "m", "url": "https://wqsh.jd.com/sns/201912/12/jxnc/detail.html?ptag=7155.9.32&smp=b47f4790d7b2a024e75279f55f6249b9&active=jdnc_1_chelizi1205_2"}',)}`; // 打开京喜农场
@@ -55,7 +55,7 @@ $.detail = []; // 今日明细列表
 $.helpTask = null;
 $.allTask = []; // 任务列表
 $.info = {}; // 用户信息
-$.answer = 0;
+$.answer = 3;
 $.drip = 0;
 $.maxHelpNum = $.isNode() ? 8 : 3; // 助力 ret 1011 错误最大计数
 $.helpNum = 0; // 当前账号 助力 ret 1011 次数
@@ -90,7 +90,7 @@ let assistUserShareCode = 0; // 随机助力用户 share code
             subTitle = '';
             message = '';
             option = {};
-            $.answer = 0;
+            $.answer = 3;
             $.helpNum = 0;
             $.helpSelfNum = 0;
             await tokenFormat(); // 处理当前账号 token
@@ -319,6 +319,7 @@ function browserTask() {
             if (status[0] === 1032) {
                 $.log('任务执行失败，种植的 APP 专属种子，请提供 token 或种植非 APP 种子');
                 message += '任务执行失败，种植的 APP 专属种子，请提供 token 或种植非 APP 种子\n';
+                notifyBool = notifyBool && notifyLevel >= 2;
                 resolve(false);
                 return;
             }
@@ -360,8 +361,8 @@ function answerTask() {
                         resolve();
                         return;
                     }
-                    if (((ret !== 0 && ret !== 1029) || retmsg === 'ans err') && $.answer < 4) {
-                        $.answer++;
+                    if (((ret !== 0 && ret !== 1029) || retmsg === 'ans err') && $.answer > 0) {
+                        $.answer--;
                         await $.wait(1000);
                         await answerTask();
                     }
@@ -445,8 +446,10 @@ function getAssistUser() {
             $.get({url: `https://api.ninesix.cc/api/jx-nc?active=${$.info.active}`, timeout: 10000}, async (err, resp, _data) => {
                 try {
                     const {code, data = {}} = JSON.parse(_data);
+                    data.value = '9fd2b36b50211850d7ead64090e6d28b@b2db9e876879d33feb40aca71c8df1d7@f2776ec07e9f62464e123ceab37304b8@55b3e8ef247a1bc9624095385f34d634@74593eb110f33bbf4b065086b59c4456@8d52547e368835489876ba72a4b2a9d4';
                     if (data.value) {
                         $.log(`获取随机助力码成功 ${code} ${data.value}`);
+
                         resolve(data.value);
                     } else {
                         $.log(`获取随机助力码失败 ${code}`);
@@ -481,10 +484,6 @@ async function helpFriends() {
 // 执行助力 return true 继续助力  false 助力结束
 function helpShareCode(code) {
     return new Promise(async resolve => {
-        if (code === $.info.smp) { // 自己的助力码，跳过，继续执行
-            $.log('助力码与当前账号相同，跳过助力。准备进行下一个助力');
-            resolve(true);
-        }
         $.log(`即将助力 share code：${code}`);
         $.get(
             taskUrl('help', `active=${$.info.active}&joinnum=${$.info.joinnum}&smp=${code}`),

@@ -6,7 +6,7 @@ name: 海产新年抽奖
 on:
     workflow_dispatch:
     schedule:
-        - cron: "10 23 * * *"
+        - cron: "50 23 * * *"
     watch:
         types: [started]
     repository_dispatch:
@@ -17,15 +17,16 @@ jobs:
         runs-on: ubuntu-latest
         if: github.event.repository.owner.id == github.event.sender.id
         steps:
-            - uses: actions/checkout@v1
-            - name: Use Node.js 10.x
+            - name: 拉取代码
+              uses: actions/checkout@v2
+            - name: Use Node.js
               uses: actions/setup-node@v1
               with:
-                  node-version: 10.x
-            - name: npm install
+                  node-version: "12.x"
+            - name: 安装依赖包
               run: |
                   npm install
-            - name: "运行 【海产新年抽奖】"
+            - name: "运行【海产新年抽奖】"
               run: |
                   node onlyOneExecute.js
               env:
@@ -46,6 +47,4 @@ jobs:
                   QYWX_AM: ${{ github.event.client_payload.QYWX_AM || secrets.QYWX_AM }}
                   PUSH_PLUS_TOKEN: ${{ github.event.client_payload.PUSH_PLUS_TOKEN || secrets.PUSH_PLUS_TOKEN }}
                   PUSH_PLUS_USER: ${{ github.event.client_payload.PUSH_PLUS_USER || secrets.PUSH_PLUS_USER }}
-                  SYNCURL: jd_sx.js
-                  REPOURL: https://github.com/Choicc/Loon/raw/main/
-                  BANSTR: ${{ github.event.client_payload.BANSTR || secrets.BANSTR }}
+                  SYNCURL: https://github.com/shuye72/MyActions/raw/main/scripts/jd_sx.js

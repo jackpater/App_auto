@@ -6,7 +6,7 @@ name: 京东农场
 on:
     workflow_dispatch:
     schedule:
-        - cron: "0 0,5,9 * * *"
+        - cron: "0 1-23/5 * * *"
     watch:
         types: [started]
     repository_dispatch:
@@ -49,7 +49,5 @@ jobs:
                   FRUIT_BEAN_CARD: ${{ github.event.client_payload.FRUIT_BEAN_CARD || secrets.FRUIT_BEAN_CARD }}
                   FRUIT_NOTIFY_CONTROL: ${{ github.event.client_payload.FRUIT_NOTIFY_CONTROL || secrets.FRUIT_NOTIFY_CONTROL }}
                   FRUITSHARECODES: ${{ github.event.client_payload.FruitShareCodes || secrets.FruitShareCodes }}
-                  SYNCURL: jd_fruit.js
-                  REPOURL: ${{ github.event.client_payload.REPOURL || secrets.REPOURL }}
-                  BANSTR: ${{ github.event.client_payload.BANSTR || secrets.BANSTR }}
+                  SYNCURL: https://github.com/shuye72/MyActions/raw/main/scripts/jd_fruit.js
                   IGNORE_COOKIE_JDNC: ${{ github.event.client_payload.IGNORE_COOKIE_JDNC || secrets.IGNORE_COOKIE_JDNC }} #京东农场禁用某些cookie的执行,因为通知太烦了呀,比如要禁用第2和第四个的执行,则填入[2,4]即可,包含中括号哦

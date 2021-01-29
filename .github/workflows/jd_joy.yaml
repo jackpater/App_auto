@@ -1,12 +1,12 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 京东宠汪汪
+name: 京东宠汪汪🐕
 
 on:
     workflow_dispatch:
     schedule:
-        - cron: "20 5,19 * * *"
+        - cron: "15 */7 * * *"
     watch:
         types: [started]
     repository_dispatch:
@@ -25,7 +25,7 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: "运行 【宠汪汪】"
+            - name: "运行 【宠汪汪🐕】"
               run: |
                   node onlyOneExecute.js
               env:
@@ -49,6 +49,6 @@ jobs:
                   JOY_FEED_COUNT: ${{ github.event.client_payload.JOY_FEED_COUNT || secrets.JOY_FEED_COUNT }}
                   JOY_RUN_FLAG: ${{ github.event.client_payload.JOY_RUN_FLAG || secrets.JOY_RUN_FLAG }}
                   JOY_TEAM_LEVEL: ${{ github.event.client_payload.JOY_TEAM_LEVEL || secrets.JOY_TEAM_LEVEL }}
-                  SYNCURL: jd_joy.js
-                  REPOURL: ${{ github.event.client_payload.REPOURL || secrets.REPOURL }}
-                  BANSTR: ${{ github.event.client_payload.BANSTR || secrets.BANSTR }}
+                  SYNCURL: https://github.com/shuye72/MyActions/raw/main/scripts/jd_joy.js
+                  #专属配置
+                  IGNORE_COOKIE_JDJOYPET: ${{ github.event.client_payload.IGNORE_COOKIE_JDJOYPET || secrets.IGNORE_COOKIE_JDJOYPET }}

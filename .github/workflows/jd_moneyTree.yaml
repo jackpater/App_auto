@@ -47,6 +47,4 @@ jobs:
                   PUSH_PLUS_TOKEN: ${{ github.event.client_payload.PUSH_PLUS_TOKEN || secrets.PUSH_PLUS_TOKEN }}
                   PUSH_PLUS_USER: ${{ github.event.client_payload.PUSH_PLUS_USER || secrets.PUSH_PLUS_USER }}
                   MONEY_TREE_SELL_FRUIT: ${{ github.event.client_payload.MONEY_TREE_SELL_FRUIT || secrets.MONEY_TREE_SELL_FRUIT }}
-                  SYNCURL: jd_moneyTree.js
-                  REPOURL: ${{ github.event.client_payload.REPOURL || secrets.REPOURL }}
-                  BANSTR: ${{ github.event.client_payload.BANSTR || secrets.BANSTR }}
+                  SYNCURL: https://github.com/shuye72/MyActions/raw/main/scripts/jd_moneyTree.js

@@ -1,12 +1,12 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 京小超
+name: 东东超市
 
 on:
     workflow_dispatch:
     schedule:
-        - cron: "10 */4 * * *"
+        - cron: "11 1-23/5 * * *"
     watch:
         types: [started]
     repository_dispatch:
@@ -25,7 +25,7 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: "运行 【京小超】"
+            - name: "运行 【东东超市】"
               run: |
                   node onlyOneExecute.js
               env:
@@ -50,6 +50,4 @@ jobs:
                   jdBusinessCircleJump: ${{ github.event.client_payload.BUSINESS_CIRCLE_JUMP || secrets.BUSINESS_CIRCLE_JUMP }}
                   SUPERMARKET_LOTTERY: ${{ github.event.client_payload.SUPERMARKET_LOTTERY || secrets.SUPERMARKET_LOTTERY }}
                   SUPERMARKET_SHARECODES: ${{ github.event.client_payload.SUPERMARKET_SHARECODES || secrets.SUPERMARKET_SHARECODES }}
-                  SYNCURL: jd_superMarket.js
-                  REPOURL: ${{ github.event.client_payload.REPOURL || secrets.REPOURL }}
-                  BANSTR: ${{ github.event.client_payload.BANSTR || secrets.BANSTR }}
+                  SYNCURL: https://github.com/shuye72/MyActions/raw/main/scripts/jd_superMarket.js
