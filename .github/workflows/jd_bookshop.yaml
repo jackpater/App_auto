@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 京东口袋书店
+name: 京东口袋书店📕
 
 on:
     workflow_dispatch:
@@ -25,7 +25,7 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: "运行 【京东口袋书店】"
+            - name: "运行 【京东口袋书店📕】"
               run: |
                   node onlyOneExecute.js
               env:
