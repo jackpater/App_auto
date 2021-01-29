@@ -1,16 +1,16 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 神仙书院答题
+name: 京东宠汪汪偷好友狗粮和积分
 
 on:
     workflow_dispatch:
     schedule:
-        - cron: "*/5 11-13 * * *"
+        - cron: "0 4,22 * * *"
     watch:
         types: [started]
     repository_dispatch:
-        types: jd_immortal_answer
+        types: jd_joy_steal
 
 jobs:
     build:
@@ -25,7 +25,7 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: "运行 【神仙书院答题】"
+            - name: "运行 【宠汪汪偷好友狗粮与积分】"
               run: |
                   node onlyOneExecute.js
               env:
@@ -46,7 +46,8 @@ jobs:
                   QYWX_AM: ${{ github.event.client_payload.QYWX_AM || secrets.QYWX_AM }}
                   PUSH_PLUS_TOKEN: ${{ github.event.client_payload.PUSH_PLUS_TOKEN || secrets.PUSH_PLUS_TOKEN }}
                   PUSH_PLUS_USER: ${{ github.event.client_payload.PUSH_PLUS_USER || secrets.PUSH_PLUS_USER }}
-                  SYNCURL: jd_dati.js
-                  REPOURL: https://raw.githubusercontent.com/i-chenzhe/qx/main/
+                  jdJoyStealCoin: ${{ github.event.client_payload.jdJoyStealCoin || secrets.jdJoyStealCoin }}
+                  JOY_HELP_FEED: ${{ github.event.client_payload.JOY_HELP_FEED || secrets.JOY_HELP_FEED }}
+                  SYNCURL: jd_joy_steal.js
+                  REPOURL: ${{ github.event.client_payload.REPOURL || secrets.REPOURL }}
                   BANSTR: ${{ github.event.client_payload.BANSTR || secrets.BANSTR }}
-                  
