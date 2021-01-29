@@ -7,8 +7,8 @@ exports.main_handler = async (event, context, callback) => {
       console.log(v);
       var request = require('request');
       //1.执行自己上传的js文件
-      //delete require.cache[require.resolve('./'+v+'.js')];
-      //require('./'+v+'.js')
+      delete require.cache[require.resolve('./'+v+'.js')];
+      require('./'+v+'.js')
 
       //2.执行国内gitee远端js文件如果部署，在国内节点，选择1或2的方式
       //request('https://github.com/Choicc/MyActions/raw/main/scripts/'+v+'.js', function (error, response, body) {
@@ -16,9 +16,9 @@ exports.main_handler = async (event, context, callback) => {
       //})
 
       //3.执行github远端的js文件(因github的raw类型的文件被墙,此方法云函数不推荐)
-      request('https://raw.githubusercontent.com/lxk0301/jd_scripts/master/' + v + '.js', function (error, response, body) {
-        eval(response.body)
-      })
+      //request('https://raw.githubusercontent.com/lxk0301/jd_scripts/master/' + v + '.js', function (error, response, body) {
+        //eval(response.body)
+     // })
     }
   } catch (e) {
     console.error(e)
