@@ -50,4 +50,4 @@ jobs:
                   jdBusinessCircleJump: ${{ github.event.client_payload.BUSINESS_CIRCLE_JUMP || secrets.BUSINESS_CIRCLE_JUMP }}
                   SUPERMARKET_LOTTERY: ${{ github.event.client_payload.SUPERMARKET_LOTTERY || secrets.SUPERMARKET_LOTTERY }}
                   SUPERMARKET_SHARECODES: ${{ github.event.client_payload.SUPERMARKET_SHARECODES || secrets.SUPERMARKET_SHARECODES }}
-                  SYNCURL: https://github.com/shuye72/MyActions/raw/main/scripts/jd_superMarket.js
+                  SYNCURL: https://github.com/jackpater/jd_actions/raw/main/scripts/jd_superMarket.js

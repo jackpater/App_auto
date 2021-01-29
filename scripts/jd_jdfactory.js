@@ -16,17 +16,17 @@
 ============Quantumultx===============
 [task_local]
 #京东工厂
-10 * * * * https://raw.githubusercontent.com/shuye72/MyActions/main/scripts/jd_jdfactory.js, tag=东东工厂, enabled=true
+10 * * * * https://raw.githubusercontent.com/jackpater/jd_actions/main/scripts/jd_jdfactory.js, tag=东东工厂, enabled=true
 
 ================Loon==============
 [Script]
-cron "10 * * * *" script-path=https://raw.githubusercontent.com/shuye72/MyActions/main/scripts/jd_jdfactory.js,tag=东东工厂
+cron "10 * * * *" script-path=https://raw.githubusercontent.com/jackpater/jd_actions/main/scripts/jd_jdfactory.js,tag=东东工厂
 
 ===============Surge=================
-东东工厂 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/shuye72/MyActions/main/scripts/jd_jdfactory.js
+东东工厂 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/jackpater/jd_actions/main/scripts/jd_jdfactory.js
 
 ============小火箭=========
-东东工厂 = type=cron,script-path=https://raw.githubusercontent.com/shuye72/MyActions/main/scripts/jd_jdfactory.js, cronexpr="10 * * * *", timeout=200, enable=true
+东东工厂 = type=cron,script-path=https://raw.githubusercontent.com/jackpater/jd_actions/main/scripts/jd_jdfactory.js, cronexpr="10 * * * *", timeout=200, enable=true
  */
 const $ = new Env('东东工厂');
 

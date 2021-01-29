@@ -48,4 +48,4 @@ jobs:
                   PUSH_PLUS_USER: ${{ github.event.client_payload.PUSH_PLUS_USER || secrets.PUSH_PLUS_USER }}
                   jdJoyStealCoin: ${{ github.event.client_payload.jdJoyStealCoin || secrets.jdJoyStealCoin }}
                   JOY_HELP_FEED: ${{ github.event.client_payload.JOY_HELP_FEED || secrets.JOY_HELP_FEED }}
-                  SYNCURL: https://github.com/shuye72/MyActions/raw/main/scripts/jd_joy_steal.js
+                  SYNCURL: https://github.com/jackpater/jd_actions/raw/main/scripts/jd_joy_steal.js

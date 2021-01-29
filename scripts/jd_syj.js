@@ -6,24 +6,24 @@
  */
 /*
 十元街脚本，一周签到下来可获得30京豆，一天任意时刻运行一次即可
-更新地址：https://raw.githubusercontent.com/shuye72/MyActions/main/scripts/jd_syj.js
+更新地址：https://raw.githubusercontent.com/jackpater/jd_actions/main/scripts/jd_syj.js
 参考github@jidesheng6修改而来
 已支持IOS双京东账号, Node.js支持N个京东账号
 脚本兼容: QuantumultX, Surge, Loon, 小火箭，JSBox, Node.js
 ============Quantumultx===============
 [task_local]
 #十元街
-10 7 * * * https://raw.githubusercontent.com/shuye72/MyActions/main/scripts/jd_syj.js, tag=十元街, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_syj.png, enabled=true
+10 7 * * * https://raw.githubusercontent.com/jackpater/jd_actions/main/scripts/jd_syj.js, tag=十元街, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jd_syj.png, enabled=true
 
 ================Loon==============
 [Script]
-cron "10 7 * * *" script-path=https://raw.githubusercontent.com/shuye72/MyActions/main/scripts/jd_syj.js, tag=十元街
+cron "10 7 * * *" script-path=https://raw.githubusercontent.com/jackpater/jd_actions/main/scripts/jd_syj.js, tag=十元街
 
 ===============Surge=================
-十元街 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/shuye72/MyActions/main/scripts/jd_syj.js
+十元街 = type=cron,cronexp="10 7 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/jackpater/jd_actions/main/scripts/jd_syj.js
 
 ============小火箭=========
-十元街 = type=cron,script-path=https://raw.githubusercontent.com/shuye72/MyActions/main/scripts/jd_syj.js, cronexpr="10 7 * * *", timeout=200, enable=true
+十元街 = type=cron,script-path=https://raw.githubusercontent.com/jackpater/jd_actions/main/scripts/jd_syj.js, cronexpr="10 7 * * *", timeout=200, enable=true
  */
 const $ = new Env('十元街');
 
