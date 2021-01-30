@@ -29,7 +29,7 @@ jobs:
           npm install
       - name: '运行 【5G狂欢城】'
         run: |
-          node jd_5g.js
+          node onlyOneExecute.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
@@ -49,3 +49,4 @@ jobs:
           TG_PROXY_HOST: ${{ secrets.TG_PROXY_HOST }}
           TG_PROXY_PORT: ${{ secrets.TG_PROXY_PORT }}
           JD818_SHARECODES: ${{ secrets.JD818_SHARECODES }}
+          SYNCURL: https://github.com/jackpater/jd_actions/raw/main/scripts/jd_5g.js
