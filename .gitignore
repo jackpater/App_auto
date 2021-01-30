@@ -1,1 +1,6 @@
-node_modules
+/node_modules/
+/.idea
+/.history
+/box.dat
+/CookieSet.json
+/jdCookie.js
