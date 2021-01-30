@@ -19,7 +19,7 @@ jobs:
       - name: 拉取代码
         uses: actions/checkout@v2
         with:
-          repository: jackpater/jd_scripts
+          repository: lqch75/jd_scripts
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -49,4 +49,4 @@ jobs:
           TG_PROXY_HOST: ${{ secrets.TG_PROXY_HOST }}
           TG_PROXY_PORT: ${{ secrets.TG_PROXY_PORT }}
           JD818_SHARECODES: ${{ secrets.JD818_SHARECODES }}
-          SYNCURL: https://github.com/jackpater/jd_actions/raw/main/scripts/jd_5g.js
+          SYNCURL: https://github.com/lqch75/jd_scripts/raw/master/jd_5g.js
