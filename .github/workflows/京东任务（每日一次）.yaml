@@ -1,12 +1,12 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 京东定时任务
+name: 京东任务（每日一次）🐕
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */8 * * *'
+    - cron: '25 2 * * *'
   watch:
     types: started
   repository_dispatch:
@@ -59,16 +59,6 @@ jobs:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           TG_USER_ID: ${{ secrets.TG_USER_ID }}
-
-      - name: '运行 【京喜签到】'
-        run: |
-          cd ~/TaskAction
-          node jx_sign.js
-        env:
-          JD_COOKIE: ${{ secrets.JD_COOKIE }}
-          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
-          TG_USER_ID: ${{ secrets.TG_USER_ID }}
-
 
       - name: '运行 【京小超兑换奖品】'
         run: |
@@ -126,7 +116,7 @@ jobs:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           TG_USER_ID: ${{ secrets.TG_USER_ID }}
-
+          JD_CASH_SHARECODES: ${{ secrets.JD_CASH_SHARECODES }}
 
       - name: '运行 【京东汽车】'
         run: |
@@ -164,7 +154,9 @@ jobs:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           TG_USER_ID: ${{ secrets.TG_USER_ID }}
-
+          JDJOY_HELPSELF: ${{ github.event.client_payload.JDJOY_HELPSELF || secrets.JDJOY_HELPSELF }}
+          JDJOY_APPLYJDBEAN: ${{ github.event.client_payload.JDJOY_APPLYJDBEAN || secrets.JDJOY_APPLYJDBEAN }}
+          JDJOY_SHARECODES: ${{ github.event.client_payload.JDJOY_SHARECODES || secrets.JDJOY_SHARECODES }}          
 
       - name: '运行 【京东排行榜】'
         run: |
