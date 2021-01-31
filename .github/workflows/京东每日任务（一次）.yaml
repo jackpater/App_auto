@@ -21,7 +21,7 @@ jobs:
       - name: Checkout
         if: env.JD_COOKIE
         run: |
-          git clone https://github.com/jackpater/jd_scripts_gitee.git ~/jd_scripts_gitee
+          git clone https://github.com/jackpater/TaskAction.git ~/TaskAction
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         if: env.JD_COOKIE
@@ -38,12 +38,13 @@ jobs:
       - name: npm install
         if: env.JD_COOKIE
         run: |
-          cd ~/jd_scripts_gitee
+          cd ~/TaskAction
+          git checkout jd_code
           npm install
 
       - name: '运行 【签到】'
         run: |
-          cd ~/jd_scripts_gitee
+          cd ~/TaskAction
           node jd_bean_sign.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
@@ -52,7 +53,7 @@ jobs:
 
       - name: '运行 【京喜签到】'
         run: |
-          cd ~/jd_scripts_gitee
+          cd ~/TaskAction
           node jx_sign.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
@@ -61,7 +62,7 @@ jobs:
 
       - name: '运行 【京喜签到】'
         run: |
-          cd ~/jd_scripts_gitee
+          cd ~/TaskAction
           node jx_sign.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
@@ -71,7 +72,7 @@ jobs:
 
       - name: '运行 【京小超兑换奖品】'
         run: |
-          cd ~/jd_scripts_gitee
+          cd ~/TaskAction
           node jd_blueCoin.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
@@ -80,7 +81,7 @@ jobs:
 
       - name: '运行 【摇京豆】'
         run: |
-          cd ~/jd_scripts_gitee
+          cd ~/TaskAction
           node jd_club_lottery.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
@@ -89,7 +90,7 @@ jobs:
 
       - name: '运行 【领京豆额外奖励】'
         run: |
-          cd ~/jd_scripts_gitee
+          cd ~/TaskAction
           node jd_bean_home.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
@@ -99,7 +100,7 @@ jobs:
 
       - name: '运行 【京东全民开红包】'
         run: |
-          cd ~/jd_scripts_gitee
+          cd ~/TaskAction
           node jd_redPacket.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
@@ -109,7 +110,7 @@ jobs:
 
       - name: '运行 【进店领豆】'
         run: |
-          cd ~/jd_scripts_gitee
+          cd ~/TaskAction
           node jd_shop.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
@@ -119,7 +120,7 @@ jobs:
 
       - name: '运行 【签到领现金】'
         run: |
-          cd ~/jd_scripts_gitee
+          cd ~/TaskAction
           node jd_cash.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
@@ -129,16 +130,16 @@ jobs:
 
       - name: '运行 【京东汽车】'
         run: |
-          cd ~/jd_scripts_gitee
+          cd ~/TaskAction
           node jd_car.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           TG_USER_ID: ${{ secrets.TG_USER_ID }}
 
-      - name: '运行 【京东汽车】'
+      - name: '运行 【京东汽车exchange】'
         run: |
-          cd ~/jd_scripts_gitee
+          cd ~/TaskAction
           node jd_car_exchange.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
@@ -147,7 +148,7 @@ jobs:
 
       - name: '运行 【东东小窝】'
         run: |
-          cd ~/jd_scripts_gitee
+          cd ~/TaskAction
           node jd_small_home.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
@@ -157,7 +158,7 @@ jobs:
 
       - name: '运行 【疯狂的joy】'
         run: |
-          cd ~/jd_scripts_gitee
+          cd ~/TaskAction
           node jd_crazy_joy.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
@@ -167,7 +168,7 @@ jobs:
 
       - name: '运行 【京东排行榜】'
         run: |
-          cd ~/jd_scripts_gitee
+          cd ~/TaskAction
           node jd_rankingList.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
@@ -177,7 +178,7 @@ jobs:
 
       - name: '运行 【金融养猪】'
         run: |
-          cd ~/jd_scripts_gitee
+          cd ~/TaskAction
           node jd_pigPet.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
@@ -187,7 +188,7 @@ jobs:
 
       - name: '运行 【十元街】'
         run: |
-          cd ~/jd_scripts_gitee
+          cd ~/TaskAction
           node jd_syj.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
@@ -197,7 +198,7 @@ jobs:
 
       - name: '运行 【京东快递】'
         run: |
-          cd ~/jd_scripts_gitee
+          cd ~/TaskAction
           node jd_kd.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
@@ -207,7 +208,7 @@ jobs:
 
       - name: '运行 【京东赚赚】'
         run: |
-          cd ~/jd_scripts_gitee
+          cd ~/TaskAction
           node jd_jdzz.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
@@ -217,7 +218,7 @@ jobs:
 
       - name: '运行 【盲盒抽京豆】'
         run: |
-          cd ~/jd_scripts_gitee
+          cd ~/TaskAction
           node jd_sgmh.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
@@ -227,7 +228,7 @@ jobs:
 
       - name: '运行 【京东秒秒币】'
         run: |
-          cd ~/jd_scripts_gitee
+          cd ~/TaskAction
           node jd_ms.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
@@ -236,7 +237,7 @@ jobs:
 
       - name: '运行 【源头好物红包】'
         run: |
-          cd ~/jd_scripts_gitee
+          cd ~/TaskAction
           node jd_coupon.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
@@ -245,7 +246,7 @@ jobs:
 
       - name: '运行 【京东超级盒子】'
         run: |
-          cd ~/jd_scripts_gitee
+          cd ~/TaskAction
           node jd_super_box.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
@@ -254,7 +255,7 @@ jobs:
 
       - name: '运行 【小鸽有礼】'
         run: |
-          cd ~/jd_scripts_gitee
+          cd ~/TaskAction
           node jd_xg.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
@@ -264,7 +265,7 @@ jobs:
       
       - name: '运行 【京东抽奖机】'
         run: |
-          cd ~/jd_scripts_gitee
+          cd ~/TaskAction
           node jd_lotteryMachine.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
