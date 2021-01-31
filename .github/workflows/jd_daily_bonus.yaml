@@ -44,4 +44,4 @@ jobs:
                   JD_BEAN_STOP: ${{ github.event.client_payload.JD_BEAN_STOP || secrets.JD_BEAN_STOP }}
                   JD_BEAN_SIGN_STOP_NOTIFY: ${{ github.event.client_payload.JD_BEAN_SIGN_STOP_NOTIFY || secrets.JD_BEAN_SIGN_STOP_NOTIFY }}
                   JD_BEAN_SIGN_NOTIFY_SIMPLE: ${{ github.event.client_payload.JD_BEAN_SIGN_NOTIFY_SIMPLE || secrets.JD_BEAN_SIGN_NOTIFY_SIMPLE }}
-                  SYNCURL: https://github.com/jackpater/jd_actions/raw/main/scripts/jd_bean_sign.js
+                  SYNCURL: https://github.com/jackpater/TaskAction/raw/jd_code/jd_bean_sign.js

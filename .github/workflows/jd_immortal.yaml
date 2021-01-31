@@ -47,7 +47,7 @@ jobs:
                   QYWX_AM: ${{ github.event.client_payload.QYWX_AM || secrets.QYWX_AM }}
                   PUSH_PLUS_TOKEN: ${{ github.event.client_payload.PUSH_PLUS_TOKEN || secrets.PUSH_PLUS_TOKEN }}
                   PUSH_PLUS_USER: ${{ github.event.client_payload.PUSH_PLUS_USER || secrets.PUSH_PLUS_USER }}
-                  SYNCURL: https://github.com/jackpater/jd_actions/raw/main/scripts/jd_immortal.js
+                  SYNCURL: https://github.com/jackpater/TaskAction/raw/jd_code/jd_immortal.js
                   JD_IMMORTAL_LATLON: ${{ github.event.client_payload.JD_IMMORTAL_LATLON || secrets.JD_IMMORTAL_LATLON }} #示例：D_IMMORTAL_LATLON={"lat":33.1"lng":118.1}
                   #专属配置
                   IGNORE_COOKIE_NIAN: ${{ github.event.client_payload.IGNORE_COOKIE_NIAN || secrets.IGNORE_COOKIE_NIAN }}
