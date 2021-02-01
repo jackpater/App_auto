@@ -1,0 +1,29 @@
+name: 步步宝1
+
+on:
+    workflow_dispatch:
+    schedule:
+        - cron: "0 22,0,2,4,6,8,10,12,14 * * *"
+    watch:
+        types: [started]
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        if: github.event.repository.owner.id == github.event.sender.id
+        steps:
+            - uses: actions/checkout@v1
+            - name: Use Node.js 10.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 10.x
+            - name: npm install
+              run: |
+                  npm install
+            - name: '运行 【步步宝1】'
+              run: |
+                  node onlyOneExecute.js
+              env:
+                  TG_BOT_TOKEN: ${{ github.event.client_payload.TG_BOT_TOKEN || secrets.TG_BOT_TOKEN }}
+                  TG_USER_ID: ${{ github.event.client_payload.TG_USER_ID || secrets.TG_USER_ID }}
+                  BBBCK: ${{ github.event.client_payload.secrets.BBBCK || secrets.BBBCK }}
+                  SYNCURL: https://github.com/jackpater/TaskAction/raw/master/workflow/BBB.js
