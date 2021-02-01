@@ -12,7 +12,6 @@ jobs:
         if: github.event.repository.owner.id == github.event.sender.id
         steps:
             - uses: actions/checkout@v1
-            - uses: actions/checkout@v1
             - name: Use Node.js 12.x
               uses: actions/setup-node@v1
               with:
@@ -26,7 +25,7 @@ jobs:
               env:
                   TG_BOT_TOKEN: ${{ github.event.client_payload.TG_BOT_TOKEN || secrets.TG_BOT_TOKEN }}
                   TG_USER_ID: ${{ github.event.client_payload.TG_USER_ID || secrets.TG_USER_ID }}
-                  SMZDM_COOKIE: ${{ github.event.client_payload.SMZDM_COOKIE || secrets.SMZDM_COOKIE }}
+                  SMZDM_COOKIE: ${{ secrets.SMZDM_COOKIE }}
                   SCKEY: ${{ github.event.client_payload.SCKEY || secrets.SCKEY }}
                   TG_API: ${{ github.event.client_payload.secrets.TG_API || secrets.TG_API }}
                   SYNCURL: https://github.com/fashionzzZ/sign-actions/raw/main/smzdm.js
