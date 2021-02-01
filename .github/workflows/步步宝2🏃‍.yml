@@ -1,9 +1,9 @@
-name: 步步宝1
+name: 步步宝2🏃‍
 
 on:
     workflow_dispatch:
     schedule:
-        - cron: "0 22,0,2,4,6,8,10,12,14 * * *"
+        - cron: "0 2,0,2,4,6,8,10,12,14 * * *"
     watch:
         types: [started]
 jobs:
@@ -19,11 +19,11 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: '运行 【步步宝1】'
+            - name: '运行 【步步宝2🏃‍】'
               run: |
                   node onlyOneExecute.js
               env:
                   TG_BOT_TOKEN: ${{ github.event.client_payload.TG_BOT_TOKEN || secrets.TG_BOT_TOKEN }}
                   TG_USER_ID: ${{ github.event.client_payload.TG_USER_ID || secrets.TG_USER_ID }}
-                  BBBCK: ${{ github.event.client_payload.secrets.BBBCK || secrets.BBBCK }}
+                  BBBCK: ${{ github.event.client_payload.secrets.BBBCK2 || secrets.BBBCK2 }}
                   SYNCURL: https://github.com/jackpater/TaskAction/raw/master/workflow/BBB.js
