@@ -28,4 +28,4 @@ jobs:
                   TG_USER_ID: ${{ github.event.client_payload.TG_USER_ID || secrets.TG_USER_ID }}
                   WB_TOKEN: ${{ github.event.client_payload.secrets.WB_TOKEN || secrets.WB_TOKEN }}
                   WB_PAY: ${{ github.event.client_payload.secrets.WB_PAY || secrets.WB_PAY }}
-                  SYNCURL: https://github.com/jackpater/TaskAction/raw/master/workflow/weibo.js
+                  SYNCURL: https://github.com/jackpater/APP_SIGNIN/raw/main/Task/weibo.js
