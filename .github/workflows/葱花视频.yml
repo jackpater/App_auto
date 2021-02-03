@@ -4,7 +4,7 @@ on:
     workflow_dispatch:
     # 一次8个body，金币每日上限3000
     schedule:
-        - cron: "0 4,8,10,12 * * *"
+        - cron: "0 0-12/2 * * *"
     watch:
         types: [started]
 jobs:
