@@ -7,7 +7,7 @@ async function changeFiele() {
     let response = await axios.get(process.env.SYNCURL);
     let content = response.data;
     content = await smartReplace.inject(content);
-    await fs.writeFileSync("./executeOnce.js", content, "utf8");
+    //await fs.writeFileSync("./executeOnce.js", content, "utf8");
     console.log("替换变量完毕");
 }
 
