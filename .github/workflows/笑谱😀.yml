@@ -26,6 +26,7 @@ jobs:
               env:
                   TG_BOT_TOKEN: ${{ github.event.client_payload.TG_BOT_TOKEN || secrets.TG_BOT_TOKEN }}
                   TG_USER_ID: ${{ github.event.client_payload.TG_USER_ID || secrets.TG_USER_ID }}
+                  hostname: ${{ secrets.hostname }}
                   XP_iboxpayHEADER: ${{ secrets.XP_iboxpayHEADER }}
-                  XP_CASH: ${{ secrets.XP_CASH }}
+                  XP_XrefreshTOKEN: ${{ secrets.XP_refreshTOKEN }}
                   SYNCURL: https://github.com/ziye12/JavaScript/raw/main/Task/iboxpay.js
