@@ -2,8 +2,9 @@ name: 葱花视频
 
 on:
     workflow_dispatch:
+    # 一次8个body，金币每日上限3000
     schedule:
-        - cron: "0 */3 * * *"
+        - cron: "0 0 4,8,10,12 * * *"
     watch:
         types: [started]
 jobs:
@@ -19,19 +20,11 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: '运行 【葱花视频账号1-视频阅读1】'
+            - name: '运行 【葱花视频-自动刷视频】'
               run: |
                   node onlyOneExecute.js
               env:
                   TG_BOT_TOKEN: ${{ github.event.client_payload.TG_BOT_TOKEN || secrets.TG_BOT_TOKEN }}
                   TG_USER_ID: ${{ github.event.client_payload.TG_USER_ID || secrets.TG_USER_ID }}
                   RONGHUA_VIDEO: ${{ github.event.client_payload.secrets.RONGHUA_VIDEO || secrets.RONGHUA_VIDEO }}
-                  SYNCURL: https://github.com/546770972/ZJYONG000/raw/main/Task/RONGHUA_VIDEO.js
-            - name: '运行 【葱花视频账号1-视频阅读2】'
-              run: |
-                  node onlyOneExecute.js
-              env:
-                  TG_BOT_TOKEN: ${{ github.event.client_payload.TG_BOT_TOKEN || secrets.TG_BOT_TOKEN }}
-                  TG_USER_ID: ${{ github.event.client_payload.TG_USER_ID || secrets.TG_USER_ID }}
-                  RONGHUA_VIDEO: ${{ github.event.client_payload.secrets.RONGHUA_VIDEO2 || secrets.RONGHUA_VIDEO2 }}
                   SYNCURL: https://github.com/546770972/ZJYONG000/raw/main/Task/RONGHUA_VIDEO.js
