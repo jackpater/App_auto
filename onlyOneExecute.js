@@ -23,13 +23,13 @@ async function start() {
         return;
     }
 
-    try {
+  /*  try {
         await changeFiele();
         await exec("node executeOnce.js", { stdio: "inherit" });
     } catch (e) {
         console.log("执行异常:" + e);
     }
-    console.log("执行完毕");
+    console.log("执行完毕");*/
 }
 
 start();
