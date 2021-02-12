@@ -1,8 +1,7 @@
-name: 笑谱
+name:  笑谱‍
 
 on:
     workflow_dispatch:
-    # 测试
     schedule:
         - cron: "*/15 0-15 * * *"
     watch:
@@ -13,14 +12,14 @@ jobs:
         if: github.event.repository.owner.id == github.event.sender.id
         steps:
             - uses: actions/checkout@v1
-            - name: Use Node.js 12.x
+            - name: Use Node.js 10.x
               uses: actions/setup-node@v1
               with:
-                  node-version: 12.x
+                  node-version: 10.x
             - name: npm install
               run: |
                   npm install
-            - name: '运行 【笑谱】'
+            - name: '运行 【笑谱‍‍】'
               run: |
                   node onlyOneExecute.js
               env:
@@ -29,4 +28,4 @@ jobs:
                   XP_refreshTOKEN: ${{ secrets.XP_refreshTOKEN }}
                   XP_CASH: ${{ secrets.XP_CASH }}
                   XP_live: ${{ secrets.XP_live }}
-                  SYNCURL: https://github.com/jackpater/JavaScript/raw/main/Task/iboxpay.js
+                  SYNCURL: https://github.com/ziye12/JavaScript/raw/main/Task/iboxpay.js
