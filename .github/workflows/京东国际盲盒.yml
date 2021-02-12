@@ -6,7 +6,7 @@ name: 京东国际盲盒
 on:
     workflow_dispatch:
     schedule:
-        - cron: "0 9,12,20,21 * * *"
+        - cron: "0 1,4,12,13 * * *"
     watch:
         types: [started]
     repository_dispatch:

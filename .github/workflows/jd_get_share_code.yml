@@ -29,4 +29,4 @@ jobs:
                   JD_DEBUG: ${{ github.event.client_payload.JD_DEBUG || secrets.JD_DEBUG }}
                   JD_USER_AGENT: ${{ github.event.client_payload.JD_USER_AGENT || secrets.JD_USER_AGENT }}
                   PUSH_KEY: ${{ github.event.client_payload.PUSH_KEY || secrets.PUSH_KEY }}
-                  SYNCURL: https://raw.githubusercontent.com/jackpater/jd_actions/main/backup/jd_Get_shareCode.js
+                  SYNCURL: https://github.com/jackpater/TaskAction/raw/jd_code/jd_Get_shareCode.js
