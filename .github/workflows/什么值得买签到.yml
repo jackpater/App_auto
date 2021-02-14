@@ -35,3 +35,4 @@ jobs:
           node smzdm.js
         env:
           TG_API: ${{ secrets.TG_API }}
+          SMZDM_COOKIE: ${{ secrets.SMZDM_COOKIE }}
