@@ -20,7 +20,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/1217079729/TaskAction.git ~/TaskAction
+          git clone https://github.com/ziye66666/JavaScript.git ~/JavaScript
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -28,13 +28,13 @@ jobs:
       - name: npm install
         if: env.XP_refreshTOKEN
         run: |
-          cd ~/TaskAction
+          cd ~/JavaScript
           npm install
       - name: '运行 【笑谱😀】'
         if: env.XP_refreshTOKEN
         run: |
-          cd ~/TaskAction
-          node workflow/xiaopu.js
+          cd ~/JavaScript
+          node Task/iboxpay.js
         env:
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN2 }}
           TG_USER_ID: ${{ secrets.TG_USER_ID2 }}
