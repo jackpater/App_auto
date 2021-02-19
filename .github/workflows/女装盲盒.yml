@@ -10,7 +10,7 @@ on:
     watch:
         types: [started]
     repository_dispatch:
-        types: jd_nzmh.js
+        types: jd_nzmh
 jobs:
     build:
         runs-on: ubuntu-latest
