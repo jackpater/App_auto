@@ -5,7 +5,7 @@ name: 美丽研究院
 on:
     workflow_dispatch:
     schedule:
-        - cron: "4 23,4,11 * * *"
+        - cron: "1 23,4,11 * * *"
     watch:
         types: [started]
     repository_dispatch:
@@ -44,4 +44,4 @@ jobs:
                   QYWX_AM: ${{ github.event.client_payload.QYWX_AM || secrets.QYWX_AM }}
                   PUSH_PLUS_TOKEN: ${{ github.event.client_payload.PUSH_PLUS_TOKEN || secrets.PUSH_PLUS_TOKEN }}
                   PUSH_PLUS_USER: ${{ github.event.client_payload.PUSH_PLUS_USER || secrets.PUSH_PLUS_USER }}
-                  SYNCURL: https://github.com/dajijiyangmao/UFO/raw/main/HAOYANGMAO/The.Flash/The.Flash/j0d_be0auty.js
+                  SYNCURL: https://github.com/jackpater/TaskAction/raw/jd_code/jd_beauty.js
