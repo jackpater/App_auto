@@ -1,30 +1,30 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 粉丝互动
+name: 小鸽有礼🕊2月28日
 
 on:
     workflow_dispatch:
     schedule:
-        - cron: "0 16 * * *"
+        - cron: "1 0 * * *"
     watch:
         types: [started]
     repository_dispatch:
-        types: jd_fanslove
-
+        types: jd_nzmh
 jobs:
     build:
         runs-on: ubuntu-latest
+        if: github.event.repository.owner.id == github.event.sender.id
         steps:
             - uses: actions/checkout@v1
-            - name: Use Node.js 10.x
+            - name: Use Node.js 12.x
               uses: actions/setup-node@v1
               with:
-                  node-version: 10.x
+                  node-version: 12.x
             - name: npm install
               run: |
                   npm install
-            - name: "运行 【粉丝互动】"
+            - name: "运行 【小鸽有礼🕊2月28日】"
               run: |
                   node onlyOneExecute.js
               env:
@@ -45,4 +45,4 @@ jobs:
                   QYWX_AM: ${{ github.event.client_payload.QYWX_AM || secrets.QYWX_AM }}
                   PUSH_PLUS_TOKEN: ${{ github.event.client_payload.PUSH_PLUS_TOKEN || secrets.PUSH_PLUS_TOKEN }}
                   PUSH_PLUS_USER: ${{ github.event.client_payload.PUSH_PLUS_USER || secrets.PUSH_PLUS_USER }}
-                  SYNCURL: https://github.com/Joinmogul/scripts_mirror/raw/main/jd_fanslove.js
+                  SYNCURL: https://github.com/jackpater/TaskAction/raw/jd_code/jd_xgyl.js
