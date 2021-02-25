@@ -1,0 +1,30 @@
+name: 葱花视频
+
+on:
+    workflow_dispatch:
+    # 一次8个body，金币每日上限3000
+    schedule:
+        - cron: "0 0-12/2 * * *"
+    watch:
+        types: [started]
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        if: github.event.repository.owner.id == github.event.sender.id
+        steps:
+            - uses: actions/checkout@v1
+            - name: Use Node.js 10.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 10.x
+            - name: npm install
+              run: |
+                  npm install
+            - name: '运行 【葱花视频-自动刷视频】'
+              run: |
+                  node onlyOneExecute.js
+              env:
+                  TG_BOT_TOKEN: ${{ github.event.client_payload.TG_BOT_TOKEN || secrets.TG_BOT_TOKEN }}
+                  TG_USER_ID: ${{ github.event.client_payload.TG_USER_ID || secrets.TG_USER_ID }}
+                  RONGHUA_VIDEO: ${{ github.event.client_payload.secrets.RONGHUA_VIDEO || secrets.RONGHUA_VIDEO }}
+                  SYNCURL: https://github.com/546770972/ZJYONG000/raw/main/Task/RONGHUA_VIDEO.js
