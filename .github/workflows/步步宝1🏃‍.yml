@@ -25,5 +25,5 @@ jobs:
               env:
                   TG_BOT_TOKEN: ${{ github.event.client_payload.TG_BOT_TOKEN || secrets.TG_BOT_TOKEN }}
                   TG_USER_ID: ${{ github.event.client_payload.TG_USER_ID || secrets.TG_USER_ID }}
-                  BBBCK: ${{ github.event.client_payload.secrets.BBBCK || secrets.BBBCK }}
-                  SYNCURL: https://github.com/jackpater/TaskAction/raw/master/workflow/BBB.js
+                  BBB_bububaoTOKEN: ${{ github.event.client_payload.secrets.BBB_bububaoTOKEN || secrets.BBB_bububaoTOKEN }}
+                  SYNCURL: https://github.com/ziye66666/JavaScript/raw/main/Task/bububao.js
