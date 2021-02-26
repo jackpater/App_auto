@@ -24,12 +24,12 @@ jobs:
         with:
           node-version: 12.x
       - name: npm install
-        if: env.SMZDM_COOKIE
+        if: env.QQ_QQreadURL
         run: |
           cd ~/JavaScript
           npm install
       - name: '运行 【QQ阅读APP】'
-        if: env.SMZDM_COOKIE
+        if: env.QQ_QQreadURL
         run: |
           cd ~/JavaScript
           node Task/QQread.js
