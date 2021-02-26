@@ -1,0 +1,29 @@
+name: QQ阅读APP‍
+
+on:
+    workflow_dispatch:
+    schedule:
+        - cron: "*/30 0-3,6-14 * * *"
+    watch:
+        types: [started]
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        if: github.event.repository.owner.id == github.event.sender.id
+        steps:
+            - uses: actions/checkout@v1
+            - name: Use Node.js 10.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 10.x
+            - name: npm install
+              run: |
+                  npm install
+            - name: '运行 【QQ阅读APP】'
+              run: |
+                  node onlyOneExecute.js
+              env:
+                  TG_BOT_TOKEN: ${{ github.event.client_payload.TG_BOT_TOKEN2 || secrets.TG_BOT_TOKEN2 }}
+                  TG_USER_ID: ${{ github.event.client_payload.TG_USER_ID2 || secrets.TG_USER_ID2 }}
+                  QQ_QQreadURL: ${{ github.event.client_payload.secrets.QQ_QQreadURL || secrets.QQ_QQreadURL }}
+                  SYNCURL: https://github.com/ziye66666/JavaScript/raw/main/Task/QQread.js
