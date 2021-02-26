@@ -12,8 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-      URL: "https://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/QQread.js"
-      RUNFILE: "Task/QQread.js"      
+      URL: "https://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/QQread.js"      
       QQ_QQreadURL: ${{ secrets.QQ_QQreadURL }}
       PUSH_KEY: ${{ secrets.PUSH_KEY }}
       BARK_PUSH: ${{ secrets.BARK_PUSH }}
@@ -46,4 +45,4 @@ jobs:
       - name: '运行 【QQ阅读APP】'
         #if: env.RLHEADER
         run: |
-          node actions.js
+          node QQread.js
