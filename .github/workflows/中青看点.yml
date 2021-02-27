@@ -1,0 +1,41 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: 中青看点
+
+on:
+  workflow_dispatch:
+  schedule:
+     - cron: '*/15 0-15 * * *'
+  watch:
+    types: started
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    env:
+        YOUTH_HEADER: ${{ secrets.YOUTH_HEADER }}
+        YOUTH_ARTBODY: ${{ secrets.YOUTH_ARTBODY }}
+        YOUTH_REDBODY: ${{ secrets.YOUTH_REDBODY }}
+        YOUTH_TIME: ${{ secrets.YOUTH_TIME }}
+    steps:
+      - name: Checkout
+        run: |
+          git clone https://github.com/Tenkai17/ks_script.git ~/ks_script
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: npm install
+        if: env.YOUTH_HEADER
+        run: |
+          cd ~/ks_script
+          npm install
+      - name: '运行 【中青看点】'
+        if: env.YOUTH_HEADER
+        run: |
+          cd ~/ks_script
+          node Task/youth.js
+        env:
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN2 }}
+          TG_USER_ID: ${{ secrets.TG_USER_ID2 }}
