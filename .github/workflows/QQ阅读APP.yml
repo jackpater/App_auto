@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/ziye66666/JavaScript.git ~/JavaScript
+          git clone https://github.com/jackpater/App_auto.git ~/App_auto
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -26,12 +26,12 @@ jobs:
       - name: npm install
         if: env.QQ_QQreadURL
         run: |
-          cd ~/JavaScript
+          cd ~/App_auto
           npm install
       - name: '运行 【QQ阅读APP】'
         if: env.QQ_QQreadURL
         run: |
-          cd ~/JavaScript
+          cd ~/App_auto
           node Task/QQread.js
         env:
           QQ_QQreadURL: ${{ secrets.QQ_QQreadURL }}

@@ -2,7 +2,7 @@
 github地址 https://github.com/ziye66666
 TG频道地址  https://t.me/ziyescript
 TG交流群   https://t.me/joinchat/AAAAAE7XHm-q1-7Np-tF3g
-boxjs链接  https://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/ziye.boxjs.json
+boxjs链接  https://raw.githubusercontent.com/jackpater/App_auto/main/Task/ziye.boxjs.json
 
 转载请备注个名字，谢谢
 
@@ -43,27 +43,27 @@ hostname=ymz.iphonezhuan.com,
 
 ############## 圈x
 #羊毛赚获取BODY
-http:\/\/ymz\.iphonezhuan\.com\/* url script-request-body http://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/ymzhuan.js
+http:\/\/ymz\.iphonezhuan\.com\/* url script-request-body http://raw.githubusercontent.com/jackpater/App_auto/main/Task/ymzhuan.js
 
 #羊毛赚模拟登录
-http:\/\/ymz\.iphonezhuan\.com\/* url script-response-body http://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/ymzhuan.js
+http:\/\/ymz\.iphonezhuan\.com\/* url script-response-body http://raw.githubusercontent.com/jackpater/App_auto/main/Task/ymzhuan.js
 
 
 
 ############## loon
 #羊毛赚获取BODY
-http-request http:\/\/ymz\.iphonezhuan\.com\/* script-path=http://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/ymzhuan.js, requires-body=1,max-size=0, tag=羊毛赚获取BODY
+http-request http:\/\/ymz\.iphonezhuan\.com\/* script-path=http://raw.githubusercontent.com/jackpater/App_auto/main/Task/ymzhuan.js, requires-body=1,max-size=0, tag=羊毛赚获取BODY
 
 #羊毛赚模拟登录BODY
-http-response http:\/\/ymz\.iphonezhuan\.com\/* script-path=http://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/ymzhuan.js, requires-body=1,max-size=0, tag=羊毛赚获取BODY
+http-response http:\/\/ymz\.iphonezhuan\.com\/* script-path=http://raw.githubusercontent.com/jackpater/App_auto/main/Task/ymzhuan.js, requires-body=1,max-size=0, tag=羊毛赚获取BODY
 
 
 ############## surge
 #羊毛赚获取BODY
-羊毛赚获取BODY = type=http-request,pattern=https:\/\/ymz\.iphonezhuan\.com\/*,script-path=http://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/ymzhuan.js
+羊毛赚获取BODY = type=http-request,pattern=https:\/\/ymz\.iphonezhuan\.com\/*,script-path=http://raw.githubusercontent.com/jackpater/App_auto/main/Task/ymzhuan.js
 
 #羊毛赚获取BODY
-羊毛赚模拟登录BODY = type=http-response,pattern=https:\/\/ymz\.iphonezhuan\.com\/*,script-path=http://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/ymzhuan.js
+羊毛赚模拟登录BODY = type=http-response,pattern=https:\/\/ymz\.iphonezhuan\.com\/*,script-path=http://raw.githubusercontent.com/jackpater/App_auto/main/Task/ymzhuan.js
 
 
 */

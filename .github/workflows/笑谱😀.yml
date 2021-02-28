@@ -20,7 +20,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/ziye66666/JavaScript.git ~/JavaScript
+          git clone https://github.com/jackpater/App_auto.git ~/App_auto
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -28,12 +28,12 @@ jobs:
       - name: npm install
         if: env.XP_refreshTOKEN
         run: |
-          cd ~/JavaScript
+          cd ~/App_auto
           npm install
       - name: '运行 【笑谱😀】'
         if: env.XP_refreshTOKEN
         run: |
-          cd ~/JavaScript
+          cd ~/App_auto
           node Task/iboxpay.js
         env:
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN2 }}

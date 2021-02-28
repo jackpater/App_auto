@@ -3,7 +3,7 @@
 github地址 https://github.com/ziye12
 TG频道地址  https://t.me/ziyescript
 TG交流群   https://t.me/joinchat/AAAAAE7XHm-q1-7Np-tF3g
-boxjs链接  https://raw.githubusercontent.com/ziye12/JavaScript/main/Task/ziye.boxjs.json
+boxjs链接  https://raw.githubusercontent.com/ziye12/App_auto/main/Task/ziye.boxjs.json
 
 转载请备注个名字，谢谢
 
@@ -22,7 +22,7 @@ boxjs链接  https://raw.githubusercontent.com/ziye12/JavaScript/main/Task/ziye.
 多账号换行
 
 
-第一步 微信扫码 https://raw.githubusercontent.com/ziye12/JavaScript/main/Task/xiaole.png  获取授权
+第一步 微信扫码 https://raw.githubusercontent.com/ziye12/App_auto/main/Task/xiaole.png  获取授权
 
 第二步 
 开代理软件，添加主机名 重写 ，然后点 我的 获取url header
@@ -40,17 +40,17 @@ hostname=minapp.xqrobot.net,
 
 ############## 圈x
 #小乐获取ck
-https:\/\/minapp\.xqrobot\.net\/* url script-request-header https://raw.githubusercontent.com/ziye12/JavaScript/main/Task/xiaole.js
+https:\/\/minapp\.xqrobot\.net\/* url script-request-header https://raw.githubusercontent.com/ziye12/App_auto/main/Task/xiaole.js
 
 ############## loon
 
 #小乐获取ck
-http-request https:\/\/minapp\.xqrobot\.net\/* script-path=https://raw.githubusercontent.com/ziye12/JavaScript/main/Task/xiaole.js, requires-header=true, tag=小乐获取ck
+http-request https:\/\/minapp\.xqrobot\.net\/* script-path=https://raw.githubusercontent.com/ziye12/App_auto/main/Task/xiaole.js, requires-header=true, tag=小乐获取ck
 
 ############## surge
 
 #小乐获取ck
-小乐获取ck = type=http-request,pattern=https:\/\/minapp\.xqrobot\.net\/*,script-path=https://raw.githubusercontent.com/ziye12/JavaScript/main/Task/xiaole.js, 
+小乐获取ck = type=http-request,pattern=https:\/\/minapp\.xqrobot\.net\/*,script-path=https://raw.githubusercontent.com/ziye12/App_auto/main/Task/xiaole.js, 
 
 
 
@@ -197,8 +197,8 @@ if (!Length) {
     $.msg(
 	$.name, 
 	'提示：⚠️请点击前往获取cookie\n', 
-	'https://raw.githubusercontent.com/ziye12/JavaScript/main/Task/xiaole.png', 
-	{"open-url": "https://raw.githubusercontent.com/ziye12/JavaScript/main/Task/xiaole.png"}
+	'https://raw.githubusercontent.com/ziye12/App_auto/main/Task/xiaole.png', 
+	{"open-url": "https://raw.githubusercontent.com/ziye12/App_auto/main/Task/xiaole.png"}
 	);
     return;
   }

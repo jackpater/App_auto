@@ -420,7 +420,7 @@ function taskPostUrl(function_id, body) {
     url: `https://lzkjdz-isv.isvjcloud.com/${function_id}`,
     headers: {
       'Host': 'lzkjdz-isv.isvjcloud.com',
-      'Accept': 'application/json, text/javascript, */*; q=0.01',
+      'Accept': 'application/json, text/App_auto, */*; q=0.01',
       'X-Requested-With': 'XMLHttpRequest',
       'Accept-Language': 'zh-cn',
       'Accept-Encoding': 'gzip, deflate, br',

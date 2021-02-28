@@ -3,7 +3,7 @@
 github地址 https://github.com/ziye66666/QCZJSPEED
 TG频道地址  https://t.me/ziyescript
 TG交流群   https://t.me/joinchat/AAAAAE7XHm-q1-7Np-tF3g
-boxjs链接  https://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/ziye.boxjs.json
+boxjs链接  https://raw.githubusercontent.com/jackpater/App_auto/main/Task/ziye.boxjs.json
 
 转载请备注个名字，谢谢
 ⚠️汽车之家极速版
@@ -60,37 +60,37 @@ CASHTIME  👉  QCZJ_CASHTIME
 hostname=mobile.app.autohome.com.cn,
 ############## 圈x
 #汽车之家极速版获取header
-https:\/\/(mobile\.app\.autohome\.com\.cn\/*||openapi\.autohome\.com\.cn\/*) url script-request-header https://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/qczjspeed.js
+https:\/\/(mobile\.app\.autohome\.com\.cn\/*||openapi\.autohome\.com\.cn\/*) url script-request-header https://raw.githubusercontent.com/jackpater/App_auto/main/Task/qczjspeed.js
 
 #汽车之家极速版获取body
-https:\/\/(mobile\.app\.autohome\.com\.cn\/*||openapi\.autohome\.com\.cn\/*) url script-request-body https://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/qczjspeed.js
+https:\/\/(mobile\.app\.autohome\.com\.cn\/*||openapi\.autohome\.com\.cn\/*) url script-request-body https://raw.githubusercontent.com/jackpater/App_auto/main/Task/qczjspeed.js
 
 #汽车之家极速版获取时段body
-http:\/\/mobile\.app\.autohome\.com\.cn\/* url script-request-body https://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/qczjspeed.js
+http:\/\/mobile\.app\.autohome\.com\.cn\/* url script-request-body https://raw.githubusercontent.com/jackpater/App_auto/main/Task/qczjspeed.js
 
 
 
 ############## loon
 
 #汽车之家极速版获取header
-http-request (mobile\.app\.autohome\.com\.cn\/*||openapi\.autohome\.com\.cn\/*) script-path=https://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/qczjspeed.js, requires-header=true, tag=汽车之家极速版获取header
+http-request (mobile\.app\.autohome\.com\.cn\/*||openapi\.autohome\.com\.cn\/*) script-path=https://raw.githubusercontent.com/jackpater/App_auto/main/Task/qczjspeed.js, requires-header=true, tag=汽车之家极速版获取header
 
 #汽车之家极速版获取body
-http-request (mobile\.app\.autohome\.com\.cn\/*||openapi\.autohome\.com\.cn\/*) script-path=https://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/qczjspeed.js,requires-body=true, tag=汽车之家极速版获取body
+http-request (mobile\.app\.autohome\.com\.cn\/*||openapi\.autohome\.com\.cn\/*) script-path=https://raw.githubusercontent.com/jackpater/App_auto/main/Task/qczjspeed.js,requires-body=true, tag=汽车之家极速版获取body
 
 #汽车之家极速版获取时段body
-http-request http:\/\/mobile\.app\.autohome\.com\.cn\/* script-path=https://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/qczjspeed.js, requires-body=true, tag=汽车之家极速版获取时段body
+http-request http:\/\/mobile\.app\.autohome\.com\.cn\/* script-path=https://raw.githubusercontent.com/jackpater/App_auto/main/Task/qczjspeed.js, requires-body=true, tag=汽车之家极速版获取时段body
 
 ############## surge
 
 #汽车之家极速版获取body
-汽车之家极速版获取body = type=http-request,pattern=(mobile\.app\.autohome\.com\.cn\/*||openapi\.autohome\.com\.cn\/*),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/qczjspeed.js, script-update-interval=0
+汽车之家极速版获取body = type=http-request,pattern=(mobile\.app\.autohome\.com\.cn\/*||openapi\.autohome\.com\.cn\/*),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/jackpater/App_auto/main/Task/qczjspeed.js, script-update-interval=0
 
 #汽车之家极速版获取header
-汽车之家极速版获取header = type=http-request,pattern=(mobile\.app\.autohome\.com\.cn\/*||openapi\.autohome\.com\.cn\/*),script-path=https://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/qczjspeed.js, 
+汽车之家极速版获取header = type=http-request,pattern=(mobile\.app\.autohome\.com\.cn\/*||openapi\.autohome\.com\.cn\/*),script-path=https://raw.githubusercontent.com/jackpater/App_auto/main/Task/qczjspeed.js, 
 
 #汽车之家极速版获取时段body
-汽车之家极速版获取时段body = type=http-request,pattern=http:\/\/mobile\.app\.autohome\.com\.cn\/*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/qczjspeed.js, script-update-interval=0
+汽车之家极速版获取时段body = type=http-request,pattern=http:\/\/mobile\.app\.autohome\.com\.cn\/*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/jackpater/App_auto/main/Task/qczjspeed.js, script-update-interval=0
 
 
 

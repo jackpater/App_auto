@@ -2,7 +2,7 @@
 github地址 https://github.com/ziye66666
 TG频道地址  https://t.me/ziyescript
 TG交流群   https://t.me/joinchat/AAAAAE7XHm-q1-7Np-tF3g
-boxjs链接  https://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/ziye.boxjs.json
+boxjs链接  https://raw.githubusercontent.com/jackpater/App_auto/main/Task/ziye.boxjs.json
 
 转载请备注个名字，谢谢
 
@@ -46,15 +46,15 @@ hostname=bububao.duoshoutuan.com,
 
 ############## 圈x
 #步步宝获取TOKEN
-https:\/\/bububao\.duoshoutuan\.com\/user\/* url script-request-header https://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/bububao.js
+https:\/\/bububao\.duoshoutuan\.com\/user\/* url script-request-header https://raw.githubusercontent.com/jackpater/App_auto/main/Task/bububao.js
 
 ############## loon
 #步步宝获取TOKEN
-http-response https:\/\/bububao\.duoshoutuan\.com\/user\/* script-path=https://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/bububao.js, requires-body=1,max-size=0, tag=步步宝获取TOKEN
+http-response https:\/\/bububao\.duoshoutuan\.com\/user\/* script-path=https://raw.githubusercontent.com/jackpater/App_auto/main/Task/bububao.js, requires-body=1,max-size=0, tag=步步宝获取TOKEN
 
 ############## surge
 #步步宝获取TOKEN
-步步宝获取TOKEN = type=http-response,pattern=https:\/\/bububao\.duoshoutuan\.com\/user\/*,script-path=https://raw.githubusercontent.com/ziye66666/JavaScript/main/Task/bububao.js
+步步宝获取TOKEN = type=http-response,pattern=https:\/\/bububao\.duoshoutuan\.com\/user\/*,script-path=https://raw.githubusercontent.com/jackpater/App_auto/main/Task/bububao.js
 */
 
 const $ = Env("步步宝");
