@@ -1,0 +1,30 @@
+name: 悦动族🏃‍🏃‍🏃‍‍
+
+on:
+    workflow_dispatch:
+    schedule:
+        - cron: "0,30 0-23 * * *"
+    watch:
+        types: [started]
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        if: github.event.repository.owner.id == github.event.sender.id
+        steps:
+            - uses: actions/checkout@v1
+            - name: Use Node.js 10.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 10.x
+            - name: npm install
+              run: |
+                  npm install
+            - name: '运行 【悦动族🏃‍🏃‍🏃‍】'
+              run: |
+                  node onlyOneExecute.js
+              env:
+                  TG_BOT_TOKEN: ${{ github.event.client_payload.TG_BOT_TOKEN2 || secrets.TG_BOT_TOKEN2 }}
+                  TG_USER_ID: ${{ github.event.client_payload.TG_USER_ID2 || secrets.TG_USER_ID2 }}
+                  YDZ_yuedongzuTOKEN: ${{ github.event.client_payload.secrets.YDZ_yuedongzuTOKEN || secrets.YDZ_yuedongzuTOKEN }}
+                  YDZ_CASH: ${{ github.event.client_payload.secrets.YDZ_CASH || secrets.YDZ_CASH }}
+                  SYNCURL: https://github.com/ziye11/JavaScript/raw/main/Task/yuedongzu.js
