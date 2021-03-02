@@ -1,0 +1,32 @@
+name: 云扫码
+
+on:
+    workflow_dispatch:
+    schedule:
+        - cron: "15 12,14,16,20,22 * * *"
+    watch:
+        types: [started]
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        if: github.event.repository.owner.id == github.event.sender.id
+        steps:
+            - uses: actions/checkout@v1
+            - name: Use Node.js 10.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 10.x
+            - name: npm install
+              run: |
+                  npm install
+            - name: '运行 【云扫码】'
+              run: |
+                  node onlyOneExecute.js
+              env:
+                  TG_BOT_TOKEN: ${{ github.event.client_payload.TG_BOT_TOKEN2 || secrets.TG_BOT_TOKEN2 }}
+                  TG_USER_ID: ${{ github.event.client_payload.TG_USER_ID2 || secrets.TG_USER_ID2 }}
+                  ysmurl: ${{ github.event.client_payload.secrets.ysmurl || secrets.ysmurl }}
+                  ysmhd: ${{ github.event.client_payload.secrets.ysmhd || secrets.ysmhd }}
+                  ysmbody: ${{ github.event.client_payload.secrets.ysmbody || secrets.ysmbody }}
+                  ysm2body: ${{ github.event.client_payload.secrets.ysm2body || secrets.ysm2body }}
+                  SYNCURL: https://github.com/age174/-/raw/main/ysm.js
