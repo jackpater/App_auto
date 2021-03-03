@@ -3,7 +3,7 @@ name: 悦动族🏃‍🏃‍🏃‍‍
 on:
     workflow_dispatch:
     schedule:
-        - cron: "0,30 0-23 * * *"
+        - cron: "0,30 0-15 * * *"
     watch:
         types: [started]
 jobs:
