@@ -1,4 +1,4 @@
-name: 悦动族🏃‍🏃‍🏃‍‍
+name: 悦动族1🏃‍🏃‍🏃‍‍
 
 on:
     workflow_dispatch:
@@ -19,7 +19,7 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: '运行 【悦动族🏃‍🏃‍🏃‍】'
+            - name: '运行 【悦动族1🏃‍🏃‍🏃‍】'
               run: |
                   node onlyOneExecute.js
               env:
