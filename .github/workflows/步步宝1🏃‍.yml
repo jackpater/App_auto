@@ -27,4 +27,4 @@ jobs:
                   TG_USER_ID: ${{ github.event.client_payload.TG_USER_ID2 || secrets.TG_USER_ID2 }}
                   BBB_bububaoTOKEN: ${{ github.event.client_payload.secrets.BBB_bububaoTOKEN || secrets.BBB_bububaoTOKEN }}
                   BBB_CASH: ${{ github.event.client_payload.secrets.BBB_CASH || secrets.BBB_CASH }}
-                  SYNCURL: https://github.com/ziye11/JavaScript/raw/main/Task/bububao.js
+                  SYNCURL: https://github.com/jackpater/App_auto/raw/main/Task/bububao.js

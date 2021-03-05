@@ -27,4 +27,4 @@ jobs:
                   TG_USER_ID: ${{ github.event.client_payload.TG_USER_ID2 || secrets.TG_USER_ID2 }}
                   YDZ_yuedongzuTOKEN: ${{ github.event.client_payload.secrets.YDZ_yuedongzuTOKEN2 || secrets.YDZ_yuedongzuTOKEN2 }}
                   # YDZ_CASH: ${{ github.event.client_payload.secrets.YDZ_CASH || secrets.YDZ_CASH }}
-                  SYNCURL: https://github.com/ziye11/JavaScript/raw/main/Task/yuedongzu.js
+                  SYNCURL: https://github.com/jackpater/App_auto/raw/main/Task/yuedongzu.js

@@ -1,6 +1,6 @@
 /* ziye 
 
-github地址 https://github.com/ziye66666/QCZJSPEED
+github地址 https://github.com/ziye11/QCZJSPEED
 TG频道地址  https://t.me/ziyescript
 TG交流群   https://t.me/joinchat/AAAAAE7XHm-q1-7Np-tF3g
 boxjs链接  https://raw.githubusercontent.com/jackpater/App_auto/main/Task/ziye.boxjs.json

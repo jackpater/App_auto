@@ -1,6 +1,6 @@
 /* ziye  导出ck专用    务必下载或者复制到本地使用
 
-github地址 https://github.com/ziye66666
+github地址 https://github.com/ziye11
 TG频道地址  https://t.me/ziyescript
 TG交流群   https://t.me/joinchat/AAAAAE7XHm-q1-7Np-tF3g
 boxjs链接  https://raw.githubusercontent.com/jackpater/App_auto/main/Task/ziye.boxjs.json

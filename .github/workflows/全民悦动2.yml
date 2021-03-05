@@ -27,4 +27,4 @@ jobs:
                   TG_USER_ID: ${{ github.event.client_payload.TG_USER_ID2 || secrets.TG_USER_ID2 }}
                   QMYD_qmydTOKEN: ${{ github.event.client_payload.secrets.QMYD_qmydTOKEN2 || secrets.QMYD_qmydTOKEN2 }}
                   QMYD_CASH: ${{ github.event.client_payload.secrets.QMYD_CASH || secrets.QMYD_CASH }}
-                  SYNCURL: https://github.com/ziye11/JavaScript/raw/main/Task/qmyd.js
+                  SYNCURL: https://github.com/jackpater/App_auto/raw/main/Task/qmyd.js
