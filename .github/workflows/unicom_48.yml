@@ -1,0 +1,28 @@
+name: repo-sync-unicom_48
+on:
+  schedule:
+    - cron: '0 */4 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+    types: repo-sync
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ github.event.client_payload.PAT || secrets.PAT }} 
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: repo-sync
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/like-tb/48-AutoSignMachine.git"
+          source_branch: "main"
+          destination_branch: "master"
+          github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
