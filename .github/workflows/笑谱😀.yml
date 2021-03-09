@@ -4,37 +4,31 @@
 name: 笑谱😀
 
 on:
-  workflow_dispatch:
-  schedule:
-     - cron: '*/15 0-15 * * *'
-  watch:
-    types: started
+    workflow_dispatch:
+    schedule:
+        - cron: "*/15 0-15 * * *"
+    watch:
+        types: [started]
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    if: github.event.repository.owner.id == github.event.sender.id
-    env:
-        XP_refreshTOKEN: ${{ secrets.XP_refreshTOKEN }}
-        XP_CASH: ${{ secrets.XP_CASH }}
-        XP_live: ${{ secrets.XP_live }}
-    steps:
-      - name: Checkout
-        run: |
-          git clone https://github.com/jackpater/App_auto.git ~/App_auto
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-      - name: npm install
-        if: env.XP_refreshTOKEN
-        run: |
-          cd ~/App_auto
-          npm install
-      - name: '运行 【笑谱😀】'
-        if: env.XP_refreshTOKEN
-        run: |
-          cd ~/App_auto
-          node Task/iboxpay.js
-        env:
-          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN2 }}
-          TG_USER_ID: ${{ secrets.TG_USER_ID2 }}
+    build:
+        runs-on: ubuntu-latest
+        if: github.event.repository.owner.id == github.event.sender.id
+        steps:
+            - uses: actions/checkout@v1
+            - name: Use Node.js 12.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 12.x
+            - name: npm install
+              run: |
+                  npm install
+            - name: '运行 【笑谱😀‍】'
+              run: |
+                  node onlyOneExecute.js
+              env:
+                  TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN2 }}
+                  TG_USER_ID: ${{ secrets.TG_USER_ID2 }}
+                  XP_refreshTOKEN: ${{ secrets.XP_refreshTOKEN }}
+                  XP_CASH: ${{ secrets.XP_CASH }}
+                  XP_live: ${{ secrets.XP_live }}
+                  SYNCURL: https://github.com/jackpater/App_auto/raw/ziye/Task/iboxpay.js
