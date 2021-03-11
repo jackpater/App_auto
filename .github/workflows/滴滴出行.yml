@@ -33,4 +33,4 @@ jobs:
         if: env.DIDI_TOKEN
         run: |
           cd ~/Task
-          node DiDi/DiDi.js
+          node master/DiDi/DiDi.js
