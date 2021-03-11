@@ -27,4 +27,4 @@ jobs:
                   TG_USER_ID: ${{ github.event.client_payload.TG_USER_ID2 || secrets.TG_USER_ID2 }}
                   DIDI_CITY: ${{ secrets.DIDI_CITY}}
                   DIDI_TOKEN: ${{ secrets.DIDI_TOKEN }}
-                  SYNCURL: https://github.com/zZPiglet/Task/raw/master/DiDi/DiDi.js
+                  SYNCURL: https://github.com/zZPiglet/Task/raw/master/DiDi/DiDi_new.js
