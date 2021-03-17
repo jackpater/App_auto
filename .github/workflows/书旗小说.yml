@@ -1,0 +1,50 @@
+name: 书旗小说‍📕
+
+on:
+    workflow_dispatch:
+    schedule:
+        - cron: "0,30 0-23 * * *"
+    watch:
+        types: [started]
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        if: github.event.repository.owner.id == github.event.sender.id
+        steps:
+            - uses: actions/checkout@v1
+            - name: Use Node.js 10.x
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 10.x
+            - name: npm install
+              run: |
+                  npm install
+            - name: '运行 【书旗小说‍📕‍】'
+              run: |
+                  node onlyOneExecute.js
+              env:
+                  shuqiuserurlVal: ${{ secrets.shuqiuserurlVal }}
+                  shuqisyurlVal: ${{ secrets.shuqisyurlVal }}
+                  shuqisybodyVal: ${{ secrets.shuqisybodyVal }}
+                  shuqispbodyVal: ${{ secrets.shuqispbodyVal }}
+                  shuqiscbodyVal: ${{ secrets.shuqiscbodyVal }}
+                  shuqiydbodyVal: ${{ secrets.shuqiydbodyVal }}
+                  shuqiqdbodyVal: ${{ secrets.shuqiqdbodyVal }}		
+                  shuqirwbodyVal: ${{ secrets.shuqirwbodyVal }}
+                  shuqifxbodyVal: ${{ secrets.shuqifxbodyVal }}
+                  shuqisprwurlVal: ${{ secrets.shuqisprwurlVal }}
+                  shuqijlbodyVal: ${{ secrets.shuqijlbodyVal }}
+                  shuqicjyurlVal: ${{ secrets.shuqicjyurlVal }}
+                  shuqicjcsbodyVal: ${{ secrets.shuqicjcsbodyVal }}
+                  shuqicjbodyVal: ${{ secrets.shuqicjbodyVal }}
+                  shuqijsspbodyVal: ${{ secrets.shuqijsspbodyVal }}
+                  shuqijsydurlVal: ${{ secrets.shuqijsydurlVal }}
+                  shuqijsydbodyVal: ${{ secrets.shuqijsydbodyVal }}
+                  shuqijsqdbodyVal: ${{ secrets.shuqijsqdbodyVal }}
+                  shuqijsqdspyurlVal: ${{ secrets.shuqijsqdspyurlVal }}
+                  shuqijsrwbodyVal: ${{ secrets.shuqijsrwbodyVal }}
+                  shuqijsfxbodyVal: ${{ secrets.shuqijsfxbodyVal }}
+                  shuqijssprwurlVal: ${{ secrets.shuqijssprwurlVal }}
+                  TG_BOT_TOKEN: ${{ github.event.client_payload.TG_BOT_TOKEN2 || secrets.TG_BOT_TOKEN2 }}
+                  TG_USER_ID: ${{ github.event.client_payload.TG_USER_ID2 || secrets.TG_USER_ID2 }}
+                  SYNCURL: https://github.com/jackpater/App_auto/raw/ziye/Task/shuqi.js
