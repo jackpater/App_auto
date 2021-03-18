@@ -53,3 +53,12 @@ jobs:
           source_branch: "master"
           destination_branch: "Sunert"
           github_token: ${{ secrets.PAT }}
+
+      - name: sync CenBoMin
+        uses: repo-sync/github-sync@v2
+        if: env.PAT
+        with:
+          source_repo: "https://github.com/CenBoMin/GithubSync.git"
+          source_branch: "main"
+          destination_branch: "CenBoMin"
+          github_token: ${{ secrets.PAT }}
