@@ -29,6 +29,8 @@ jobs:
                   TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN2 }}
                   TG_USER_ID: ${{ secrets.TG_USER_ID2 }}
                   XP_refreshTOKEN: ${{ secrets.XP_refreshTOKEN }}
+                  XP_iboxpayvideoHEADER: ${{ secrets.XP_iboxpayvideoHEADER }}
+                  XP_iboxpayvideoBODY: ${{ secrets.XP_iboxpayvideoBODY }}
                   XP_CASH: ${{ secrets.XP_CASH }}
                   XP_live: ${{ secrets.XP_live }}
                   SYNCURL: https://github.com/jackpater/App_auto/raw/ziye/Task/iboxpay.js
