@@ -23,28 +23,28 @@ jobs:
               run: |
                   node onlyOneExecute.js
               env:
-                  shuqiuserurlVal: ${{ secrets.shuqiuserurlVal }}
-                  shuqisyurlVal: ${{ secrets.shuqisyurlVal }}
-                  shuqisybodyVal: ${{ secrets.shuqisybodyVal }}
-                  shuqispbodyVal: ${{ secrets.shuqispbodyVal }}
-                  shuqiscbodyVal: ${{ secrets.shuqiscbodyVal }}
-                  shuqiydbodyVal: ${{ secrets.shuqiydbodyVal }}
-                  shuqiqdbodyVal: ${{ secrets.shuqiqdbodyVal }}		
-                  shuqirwbodyVal: ${{ secrets.shuqirwbodyVal }}
-                  shuqifxbodyVal: ${{ secrets.shuqifxbodyVal }}
-                  shuqisprwurlVal: ${{ secrets.shuqisprwurlVal }}
-                  shuqijlbodyVal: ${{ secrets.shuqijlbodyVal }}
-                  shuqicjyurlVal: ${{ secrets.shuqicjyurlVal }}
-                  shuqicjcsbodyVal: ${{ secrets.shuqicjcsbodyVal }}
-                  shuqicjbodyVal: ${{ secrets.shuqicjbodyVal }}
-                  shuqijsspbodyVal: ${{ secrets.shuqijsspbodyVal }}
-                  shuqijsydurlVal: ${{ secrets.shuqijsydurlVal }}
-                  shuqijsydbodyVal: ${{ secrets.shuqijsydbodyVal }}
-                  shuqijsqdbodyVal: ${{ secrets.shuqijsqdbodyVal }}
-                  shuqijsqdspyurlVal: ${{ secrets.shuqijsqdspyurlVal }}
-                  shuqijsrwbodyVal: ${{ secrets.shuqijsrwbodyVal }}
-                  shuqijsfxbodyVal: ${{ secrets.shuqijsfxbodyVal }}
-                  shuqijssprwurlVal: ${{ secrets.shuqijssprwurlVal }}
+                  SQ_shuqiuserURL: ${{ secrets.SQ_shuqiuserURL }}
+                  SQ_shuqisyURL: ${{ secrets.SQ_shuqisyURL }}
+                  SQ_shuqisyBODY: ${{ secrets.SQ_shuqisyBODY }}
+                  SQ_shuqispBODY: ${{ secrets.SQ_shuqispBODY }}
+                  SQ_shuqiscBODY: ${{ secrets.SQ_shuqiscBODY }}
+                  SQ_shuqiydBODY: ${{ secrets.SQ_shuqiydBODY }}
+                  SQ_shuqiqdBODY: ${{ secrets.SQ_shuqiqdBODY }}		
+                  SQ_shuqirwBODY: ${{ secrets.SQ_shuqirwBODY }}
+                  SQ_shuqifxBODY: ${{ secrets.SQ_shuqifxBODY }}
+                  SQ_shuqisprwURL: ${{ secrets.SQ_shuqisprwURL }}
+                  SQ_shuqijlBODY: ${{ secrets.SQ_shuqijlBODY }}
+                  SQ_shuqicjyURL: ${{ secrets.SQ_shuqicjyURL }}
+                  SQ_shuqicjcsBODY: ${{ secrets.SQ_shuqicjcsBODY }}
+                  SQ_shuqicjBODY: ${{ secrets.SQ_shuqicjBODY }}
+                  SQ_shuqijsspBODY: ${{ secrets.SQ_shuqijsspBODY }}
+                  SQ_shuqijsydURL: ${{ secrets.SQ_shuqijsydURL }}
+                  SQ_shuqijsydBODY: ${{ secrets.SQ_shuqijsydBODY }}
+                  SQ_shuqijsqdBODY: ${{ secrets.SQ_shuqijsqdBODY }}
+                  SQ_shuqijsqdspyURL: ${{ secrets.SQ_shuqijsqdspyURL }}
+                  SQ_shuqijsrwBODY: ${{ secrets.SQ_shuqijsrwBODY }}
+                  SQ_shuqijsfxBODY: ${{ secrets.SQ_shuqijsfxBODY }}
+                  SQ_shuqijssprwURL: ${{ secrets.SQ_shuqijssprwURL }}
                   TG_BOT_TOKEN: ${{ github.event.client_payload.TG_BOT_TOKEN2 || secrets.TG_BOT_TOKEN2 }}
                   TG_USER_ID: ${{ github.event.client_payload.TG_USER_ID2 || secrets.TG_USER_ID2 }}
-                  SYNCURL: https://github.com/jackpater/App_auto/raw/ziye/Task/shuqi.js
+                  SYNCURL: https://github.com/jackpater/App_auto/raw/ziye/Task/SQ_shuqi.js
