@@ -47,4 +47,4 @@ jobs:
                   SQ_shuqijssprwURL: ${{ secrets.SQ_shuqijssprwURL }}
                   TG_BOT_TOKEN: ${{ github.event.client_payload.TG_BOT_TOKEN2 || secrets.TG_BOT_TOKEN2 }}
                   TG_USER_ID: ${{ github.event.client_payload.TG_USER_ID2 || secrets.TG_USER_ID2 }}
-                  SYNCURL: https://github.com/jackpater/App_auto/raw/ziye/Task/SQ_shuqi.js
+                  SYNCURL: https://github.com/jackpater/App_auto/raw/ziye/Task/shuqi.js
